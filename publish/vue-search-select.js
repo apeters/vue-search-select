@@ -1375,7 +1375,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var _this2 = this;
 	
 	      return this.list.map(function (e, i) {
-	        return { value: e[_this2.optionValue], text: _this2.buildText(e) };
+	        var ret = e;
+	        ret.value = e[_this2.optionValue];
+	        re.text = _this2.buildText(e);
+	        return ret;
 	      });
 	    },
 	    item: function item() {
